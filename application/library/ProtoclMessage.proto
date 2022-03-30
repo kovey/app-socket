@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package Message;
+
+enum MessageId {
+	Req_NormalLogin = 0;
+	Req_ExtranetLogin = 1;
+	Resp_Login = 2; 
+	Resp_GameStart = 90;
+}

@@ -14,9 +14,9 @@ date_default_timezone_set('Asia/shanghai');
 
 require_once APPLICATION_PATH . '/vendor/autoload.php';
 
-use Kovey\Tcp\App\Bootstrap\Autoload;
+use Kovey\Socket\App\Bootstrap\Autoload;
 use Kovey\Library\Config\Manager;
-use Kovey\Tcp\App\App;
+use Kovey\Socket\App\App;
 use Swoole\Coroutine;
 
 Coroutine::set(array('hook_flags' => SWOOLE_HOOK_ALL));

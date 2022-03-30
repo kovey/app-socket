@@ -11,27 +11,32 @@
  */
 namespace Packet;
 
-use Kovey\Tcp\Protocol\ProtocolInterface;
+use Kovey\Socket\Protocol\ProtocolInterface;
+use Google\Protobuf\Internal\Message;
+use Message\BaseNetMessage;
 
 class Packet implements ProtocolInterface
 {
-    private int $action;
+    private BaseNetMessage $base;
 
-    private string $message;
-
-    public function __construct(string $body, int $action)
+    public function __construct(string $body)
     {
-        $this->action = $action;
-        $this->message = $body;
+        $this->base = new BaseNetMessage();
+        $this->base->mergeFromString($body);
     }
 
     public function getAction() : int
     {
-        return $this->action;
+        return $this->base->getId();
     }
 
     public function getMessage() : string
     {
-        return $this->message;
+        return $this->base->getData();
+    }
+
+    public function getBase() : Message
+    {
+        return $this->base;
     }
 }

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package Message;
+message ReqNormalLogin{
+	string account = 1;
+	string psw = 2;
+}
+message ReqExtranetLogin{
+}
+message RespLogin {
+}

@@ -1,5 +1,5 @@
 {
-    "name": "kovey/app-tcp",
+    "name": "kovey/app-socket",
     "type": "project",
     "description": "The Kovey Framework",
     "keywords": [
@@ -24,7 +24,7 @@
         "kovey/redis": "^1.0",
         "kovey/connection": "^1.1",
         "kovey/sharding": "^1.1",
-        "kovey/tcp-server": "^3.0",
+        "kovey/socket-server": "^1.0",
         "kovey/rpc-server": "^3.0",
         "kovey/logger": "^2.0"
     },

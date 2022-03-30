@@ -1,0 +1,8 @@
+syntax = "proto3";
+package Message;
+import "ProtoclMessage.proto";
+
+message BaseNetMessage {
+	MessageId id = 1;
+	bytes data = 2;
+}

@@ -12,8 +12,9 @@
 namespace Handler;
 
 use Module;
-use Kovey\Tcp\Handler\HandlerAbstract;
-use Demo\Protobuf\PacketHello;
+use Kovey\Socket\Handler\HandlerAbstract;
+use Message\ReqNormalLogin;
+use Message\MessageId;
 use Kovey\Container\Event\Protocol;
 
 class Hello extends HandlerAbstract
@@ -21,8 +22,8 @@ class Hello extends HandlerAbstract
     #[Module\Hello]
     private $hello;
 
-    #[Protocol(1001, PacketHello::class)]
-    public function world(PacketHello $packet, int $fd) : Array
+    #[Protocol(MessageId::Req_NormalLogin, ReqNormalLogin::class)]
+    public function world(ReqNormalLogin $packet, int $fd) : Array
     {
         return $this->hello->world($packet, $fd);
     }

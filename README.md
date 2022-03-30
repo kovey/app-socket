@@ -1,5 +1,5 @@
-## Kovey Tcp Framework 1.0
+## Kovey Socket Framework
 #### Description
-###### This is a php tcp framework based on swoole
+###### This is a php socket framework based on swoole
 ###### Usage
-    composer create-project kovey/app-tcp
+    composer create-project kovey/app-socket
